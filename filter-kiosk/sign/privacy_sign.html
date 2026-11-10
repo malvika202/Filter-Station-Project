@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Filter Station privacy sign</title>
+<style>
+@page { size: letter portrait; margin: 0.55in; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #14263a; font-family: Arial, Helvetica, sans-serif; }
+.sign { border: 2px solid #9fb3c8; border-radius: 18px; overflow: hidden; height: 9.85in; display: flex; flex-direction: column; }
+.peaks { display: block; width: 100%; height: 1.15in; }
+.body { padding: 0.2in 0.5in 0.3in; display: flex; flex-direction: column; flex: 1; }
+.kiosk { font-size: 15pt; font-weight: 700; color: #3d5a78; }
+h1 { font-size: 40pt; line-height: 1.05; margin: 0.04in 0 0.22in; }
+section { padding: 0.15in 0; border-top: 1.5px solid #d3dee9; }
+h2 { margin: 0 0 0.05in; font-size: 19pt; }
+p { margin: 0; font-size: 15.5pt; line-height: 1.35; }
+.foot { margin-top: auto; padding-top: 0.12in; font-size: 10.5pt; color: #5a6b7d; }
+</style>
+</head>
+<body>
+<div class="sign">
+<svg class="peaks" viewBox="0 0 800 120" preserveAspectRatio="none" aria-hidden="true">
+    <rect width="800" height="120" fill="#eef3f8"/>
+    <path fill="#c9d6e3" d="M0,120 L0,78 L70,40 L120,62 L190,18 L260,66 L320,44 L400,8 L470,58 L540,30 L610,64 L680,26 L760,60 L800,48 L800,120 Z"/>
+    <path fill="#9fb3c8" d="M0,120 L0,92 L90,70 L160,88 L240,58 L330,90 L420,66 L500,92 L590,62 L680,90 L760,72 L800,84 L800,120 Z"/>
+    <path fill="#6f8aa6" d="M10,120 L22,94 L34,120 Z M40,120 L56,84 L72,120 Z M300,120 L314,92 L328,120 Z M330,120 L348,80 L366,120 Z M372,120 L384,98 L396,120 Z M640,120 L656,86 L672,120 Z M676,120 L690,96 L704,120 Z M740,120 L758,82 L776,120 Z"/>
+  </svg>
+  <div class="body">
+  <div class="kiosk">Filter Station</div>
+  <h1>About this camera</h1>
+  <section>
+    <h2>What the camera does</h2>
+    <p>It shows a live, mirror-image video on this screen and finds where faces are, so it can add a filter. It doesn't know who you are.</p>
+  </section>
+  <section>
+    <h2>What happens to the video</h2>
+    <p>No photos or video are saved, and nothing leaves this kiosk. Each frame is shown here, then replaced by the next. The only thing the filters save is a staff setup measurement: three numbers about face size, not a photo.</p>
+  </section>
+  <section>
+    <h2>Who gets a filter</h2>
+    <p>Only someone within about 5 feet who is facing the camera. Faces farther away, turned away, or hard to measure are blurred. Blurring only works on faces the camera finds, so it can miss one.</p>
+  </section>
+  <section>
+    <h2>How to stay off screen</h2>
+    <p>Stay out of the camera's view. Anyone in view shows up on this screen, even far back, though far faces are blurred.</p>
+  </section>
+  <p class="foot">Made by Malvika, Kate, Adithi and Max, Innovation Academy AI Pathway</p>
+  </div>
+</div>
+</body>
+</html>
