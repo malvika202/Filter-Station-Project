@@ -1,0 +1,6 @@
+# Exact versions, tested together (Python 3.11, the version on Raspberry Pi OS Bookworm).
+# mediapipe 0.10.18 is the newest version that still has FaceMesh (The Visor needs it) AND
+# installs on a Raspberry Pi 5. Newer mediapipe removed FaceMesh, so don't upgrade it.
+mediapipe==0.10.18
+opencv-contrib-python==4.10.0.84
+numpy==1.26.4
