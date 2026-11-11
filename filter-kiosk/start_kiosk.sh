@@ -18,7 +18,7 @@ done
 # 3. Chromium in kiosk mode: full screen, no pinch zoom, no swipe-back, no pop-ups, incognito
 #    (nothing kept after it closes). The lock stops a second window opening.
 BROWSER="$(command -v chromium-browser || command -v chromium)"
-exec flock -n /tmp/filter-station-browser.lock "$BROWSER" --kiosk --incognito --noerrdialogs \
+exec flock -n /tmp/filter-station-browser.lock "$BROWSER" --kiosk --incognito --password-store=basic --noerrdialogs \
   --disable-infobars --no-first-run --disable-pinch --overscroll-history-navigation=0 \
   --disable-features=Translate --check-for-update-interval=31536000 --ozone-platform-hint=auto \
   http://127.0.0.1:8000/

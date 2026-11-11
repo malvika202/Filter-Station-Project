@@ -1,6 +1,6 @@
 # Filter Station: the hallway kiosk
 
-The kiosk's own screen for the team's four filters (Goldilocks, Smile, Clown Nose, The Visor).
+The kiosk's own screen for the team's four filters (Goldilocks, Smile, Clown Nose, Adoggy).
 It runs on the Raspberry Pi 5 with no internet. People tap a card on the touchscreen (or click it
 with a mouse) to pick a filter, and the privacy information is always on screen.
 
@@ -10,7 +10,7 @@ the Pi, and the server only listens on the Pi itself (127.0.0.1). `filter_adapte
 filter a frame at a time, doing exactly what its own `main()` loop does.
 
 **The look:** a winter forest at dusk, with snowy mountains and pines. The sky's color follows the
-filter that's on (gold for Goldilocks, pink for Smile, coral for Clown Nose, teal for The Visor) and
+filter that's on (gold for Goldilocks, pink for Smile, coral for Clown Nose, teal for Adoggy) and
 fades when someone picks a different one. The cards and the privacy panel are frosted glass, and the
 filter that's on is a solid white card. Each card's picture is a drawn mannequin wearing that filter's
 real artwork, made by the kiosk when it starts (`previews.py`), so real pictures show up by themselves.
@@ -22,7 +22,7 @@ real artwork, made by the kiosk when it starts (`previews.py`), so real pictures
 | `kiosk_server.py` | The kiosk program: camera loop, switching, video stream to the page |
 | `filter_adapters.py` | Runs each filter one frame at a time. The list of filters and file names is at the top. |
 | `previews.py` | Makes the card pictures from each filter's own art when the kiosk starts |
-| `filters/` | The filter files, the face model, the three pictures, and the calibration once made. Smile is Malvika's file, unchanged (it must stay that way). Clown Nose is `clown_face_filter_update_v2.py` and The Visor is `dog_visor_update_v2.py`, both fixed with the team's permission; the originals are kept beside them for reference. |
+| `filters/` | The filter files, the face model, the three pictures, and the calibration once made. Smile is Malvika's file, unchanged (it must stay that way). Clown Nose is `clown_face_filter_update_v2.py` and Adoggy is `dog_visor_update_v2.py`, both fixed with the team's permission; the originals are kept beside them for reference. |
 | `web/` | The page: `index.html`, `kiosk.css`, `kiosk.js`. Plain system font, no internet needed. |
 | `setup_pi.sh` | One-time setup on the Pi |
 | `start_kiosk.sh`, `run_server_loop.sh`, `stop_kiosk.sh` | Start, keep running, stop |

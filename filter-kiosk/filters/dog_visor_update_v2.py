@@ -1,4 +1,4 @@
-"""The Visor filter - beginner-friendly prototype. (Version 2)
+"""Adoggy (The Visor) filter - beginner-friendly prototype. (Version 2)
 
 What changed in version 2 (made with Kate's permission, by Max with Claude's help):
   - The problem: FaceMesh looks at the whole 640x480 picture, and it can't find a face that
@@ -730,7 +730,7 @@ def main():
                 break
             frame = cv2.flip(frame, 1)
             frame = visor.process(frame)
-            cv2.imshow("The Visor - press Q to quit", frame)
+            cv2.imshow("Adoggy - press Q to quit", frame)
             key = cv2.waitKey(1) & 0xFF
             if key in (ord('q'), ord('Q')):
                 break

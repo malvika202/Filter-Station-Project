@@ -8,7 +8,7 @@
 
 Each one can be checked with a real test. Only check a box after you have actually done the test.
 
-- [ ] **AC1. All four filters are on the screen.** The screen always shows four cards beside the live view: Goldilocks, Smile, Clown Nose and The Visor. Each card has the filter's name, a picture and a one-line description.
+- [ ] **AC1. All four filters are on the screen.** The screen always shows four cards beside the live view: Goldilocks, Smile, Clown Nose and Adoggy. Each card has the filter's name, a picture and a one-line description.
 - [ ] **AC2. Tapping works.** Tapping a card on the touchscreen switches the live view to that filter within 1 second.
 - [ ] **AC3. Clicking works.** Clicking a card with the mouse switches the live view to that filter within 1 second.
 - [ ] **AC4. The screen shows which filter is on.** Exactly one card is lit up at a time, and it is always the filter you can see in the live view.

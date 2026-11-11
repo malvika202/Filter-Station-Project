@@ -31,8 +31,22 @@ function buildCards(list) {
     b.querySelector(".look-name").textContent = f.name;
     b.querySelector(".look-line").textContent = f.available ? f.tagline : "Not available right now";
     b.disabled = !f.available;
-    // "click" fires for a finger tap on the touchscreen and for a mouse click
-    b.addEventListener("click", () => choose(f.id));
+    // A finger tap counts when the finger lifts still on this card, even if it slid a little on the
+    // way (a plain "click" is dropped when a finger moves more than a few pixels). The mouse and
+    // keyboard use "click". A tap is not counted twice.
+    b.addEventListener("pointerdown", (e) => { if (e.pointerType !== "mouse") b._down = true; });
+    b.addEventListener("pointercancel", () => { b._down = false; });
+    b.addEventListener("pointerup", (e) => {
+      if (e.pointerType === "mouse" || !b._down) return;
+      b._down = false;
+      if (b.disabled || !b.contains(document.elementFromPoint(e.clientX, e.clientY))) return;
+      b._tappedAt = performance.now();
+      choose(f.id);
+    });
+    b.addEventListener("click", () => {
+      if (performance.now() - (b._tappedAt || -1e9) < 800) return;
+      choose(f.id);
+    });
     looks.appendChild(b);
   }
 }

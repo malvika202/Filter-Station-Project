@@ -1,5 +1,7 @@
 # Test report: Filter Station kiosk (version 4), Goldilocks v3, Clown Nose v2 and The Visor v2
 
+Note (Nov 11): The Visor is now called **Adoggy** on the kiosk (a play on Adithi and dog). Same filter, same file.
+
 **Where these tests ran:** in the cloud, before the kiosk was on the Pi. They used Python 3.11 with
 the exact library versions in `requirements.txt` (the same ones the Pi will use), a fake camera
 built from the kit's public test photos (no photos of classmates), and Google Chrome for the page.

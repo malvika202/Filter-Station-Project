@@ -20,6 +20,9 @@ body[data-filter="visor"]      { --accent: #6fdccb; }
 
 * { box-sizing: border-box; }
 html, body { height: 100%; margin: 0; }
+/* a kiosk: fingers never pan, pinch-zoom or scroll the page (Chromium's --disable-pinch flag is not
+   enough on its own). Without this, a finger that drifts a little while holding the title cancels the hold. */
+html, body { touch-action: none; }
 body {
   overflow: hidden;
   background: #13223d;
@@ -30,7 +33,6 @@ body {
   /* a kiosk: no text selection, no pinch zoom, no long-press menus */
   user-select: none;
   -webkit-user-select: none;
-  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
 

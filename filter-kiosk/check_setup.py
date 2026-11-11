@@ -37,11 +37,11 @@ except Exception as e:
 try:
     import mediapipe as mp
     if hasattr(mp, "solutions"):
-        ok(f"mediapipe {mp.__version__} has FaceMesh (The Visor needs it)")
+        ok(f"mediapipe {mp.__version__} has FaceMesh (Adoggy needs it)")
     else:
         bad(f"mediapipe {mp.__version__} has no FaceMesh. Run: .venv/bin/python -m pip install mediapipe==0.10.18")
 except Exception as e:
-    bad(f"mediapipe won't load, so The Visor will be off: {e}")
+    bad(f"mediapipe won't load, so Adoggy will be off: {e}")
 
 import filter_adapters as fa
 try:

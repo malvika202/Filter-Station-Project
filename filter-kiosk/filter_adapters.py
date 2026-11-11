@@ -3,7 +3,7 @@
 Every filter file has its own main() with its own camera loop and window, so the kiosk can't just
 call main(). Each adapter below does exactly what that filter's main() loop does for ONE frame,
 using the filter's own functions and classes, in the same order. The Smile file (Malvika's) is never
-changed: it's loaded from the filters folder as it is. Goldilocks v3, Clown Nose v2 and The Visor v2
+changed: it's loaded from the filters folder as it is. Goldilocks v3, Clown Nose v2 and Adoggy v2
 (changed with the team's permission) each have a process() method that their own main() uses too,
 so their adapters just call it.
 
@@ -36,7 +36,7 @@ FILTERS = [
          tagline="A big cartoon smile over your mouth"),
     dict(id="clown", file="clown_face_filter_update_v2.py", name="Clown Nose",
          tagline="A shiny red clown nose"),
-    dict(id="visor", file="dog_visor_update_v2.py", name="The Visor",
+    dict(id="visor", file="dog_visor_update_v2.py", name="Adoggy",
          tagline="Dog ears, a nose and a tongue"),
 ]
 
